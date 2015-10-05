@@ -1,0 +1,12 @@
+<h1>Kirke begivenheder i Galten</h1>
+
+<% @events.each do |event| %>
+    <div class="event">
+    <span class="date <%=event.custom_properties["source"]%>_date"><%= l event.dtstart, format: :long %> </span>
+    <span class="source"><%= event.custom_properties["source"]%></span>
+    <span ><h3><%= event.summary  %></h3> </span>
+    </br>
+    <span ><i><%= event.description %></i> </span>
+    <hr>
+    </div>
+    <% end %> 
