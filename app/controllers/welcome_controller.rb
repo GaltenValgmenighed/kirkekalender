@@ -1,4 +1,5 @@
 class WelcomeController < ApplicationController
+  caches_action :index
   def index
     gava_url = 'https://www.google.com/calendar/ical/r9q5uk26psb23comadtso1isq0%40group.calendar.google.com/public/basic.ics'
     sgim_url = "https://www.google.com/calendar/ical/o1fv0807npa9acc1afas1cv50g%40group.calendar.google.com/public/basic.ics"
@@ -7,7 +8,7 @@ class WelcomeController < ApplicationController
     @events.concat(retrieve_calendar_events(sgim_url, "SGIM"))
     @events = @events
     .sort { |x,y| x.dtstart <=> y.dtstart}
-      .select {|evt| evt.dtstart > Time.now}
+    .select {|evt| evt.dtstart > Time.now}
   end
 
   private
