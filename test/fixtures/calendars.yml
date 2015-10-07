@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ics_url: MyString
+  name: MyString
+  info_url: MyString
+
+two:
+  ics_url: MyString
+  name: MyString
+  info_url: MyString
