@@ -3,7 +3,7 @@ class WelcomeController < ApplicationController
   def index
     @events = []
     Calendar.all.each do |calendar| 
-    @events.concat(retrieve_calendar_events(calendar.ics_url, calendar.name))
+      @events.concat(retrieve_calendar_events(calendar.ics_url, calendar.name))
     end
 
     @events = @events
