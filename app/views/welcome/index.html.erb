@@ -1,4 +1,3 @@
-<h1>Kirke begivenheder i Galten</h1>
 
 <% @events.each do |event| %>
     <div class="event">
@@ -6,7 +5,7 @@
     <span class="source"><a href="<%= event.custom_properties["info_url"] %>"><%= event.custom_properties["source"]%></a></span>
     <span ><h3><%= event.summary  %></h3> </span>
     </br>
-    <span ><i><%= event.description %></i> </span>
+    <span ><em><%= event.description %></em> </span>
     <hr>
     </div>
     <% end %> 
