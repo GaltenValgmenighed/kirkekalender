@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
-  caches_action :index
+  caches_action :index, :expires_in => 5.minutes
   def index
     @events = []
     Calendar.all.each do |calendar| 
