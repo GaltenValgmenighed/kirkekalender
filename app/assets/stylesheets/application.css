@@ -61,12 +61,17 @@
 }
 
 .GAVA_date{
-    background: #00786a;
+    background: #00786a !important;
 }
 
 .SGIM_date{
-    background: #ed786a;
+    background: #ed786a !important;
 }
+
+.default_date{
+    background: #bdbdbd;
+}
+
 
 .source{
     color:#777;

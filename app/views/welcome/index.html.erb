@@ -1,7 +1,7 @@
 
 <% @events.each do |event| %>
     <div class="event">
-    <span class="date <%=event.custom_properties["source"]%>_date"><%= l event.dtstart.in_time_zone('Copenhagen'), format: :long %> </span>
+    <span class="date default_date <%=event.custom_properties["source"]%>_date"><%= l event.dtstart.in_time_zone('Copenhagen'), format: :long %> </span>
     <span class="source"><a href="<%= event.custom_properties["info_url"] %>" class="btn btn-default" target="_blank"><%= event.custom_properties["source"]%></a></span>
     <span ><h3><%= event.summary  %></h3> </span>
     </br>
