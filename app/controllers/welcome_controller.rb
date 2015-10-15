@@ -9,6 +9,8 @@ class WelcomeController < ApplicationController
     @events = @events
     .sort { |x,y| x.dtstart <=> y.dtstart}
     .select {|evt| evt.dtstart > Time.now}
+
+    @news = News.all
   end
 
   private
