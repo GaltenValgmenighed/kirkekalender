@@ -10,7 +10,7 @@ class WelcomeController < ApplicationController
     .sort { |x,y| x.dtstart <=> y.dtstart}
     .select {|evt| evt.dtstart > Time.now}
 
-    @news = News.all
+    @news = News.where("startdate < ? AND enddate > ?", Time.now, Time.now).order('startdate ASC')
   end
 
   private
