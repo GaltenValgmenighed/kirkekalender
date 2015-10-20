@@ -7,10 +7,10 @@ class WelcomeController < ApplicationController
     end
 
     @events = @events
-    .sort { |x,y| x.dtstart <=> y.dtstart}
-    .select {|evt| evt.dtstart > Time.now}
+      .sort { |x,y| x.dtstart <=> y.dtstart}
+      .select {|evt| evt.dtstart > Time.now}
 
-  @news = News.news_in_the_future
+    @news = News.news_in_the_future
   end
 
   private
